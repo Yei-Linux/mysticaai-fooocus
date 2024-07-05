@@ -1,0 +1,67 @@
+body {
+  background: #0b0f19!important;
+}
+
+div.svelte-1ogxbi0:before {
+    content:'';
+    background:url('https://res.cloudinary.com/drlaoo2lj/image/upload/v1717177358/hero_eckw8y.png');
+    width: 100%;
+    height: 100vh;
+    display: block; 
+    background-size: 100% 100%;
+}
+
+  .wrap {
+    flex-direction: row;
+  }
+
+  h2.svelte-1ogxbi0 {
+    text-align: center;
+  }
+
+  span.svelte-1gfkn6j {
+    color:#828282;
+    text-transform: capitalize;
+  }
+ 
+  .padded.svelte-90oupt {
+    padding: 12px 0;
+  }
+  .wrap.svelte-1ogxbi0{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+  }
+  .compact.svelte-vt1mxs, .panel.svelte-vt1mxs {
+    background: transparent;
+  }
+  .block.svelte-90oupt {
+    background: transparent;
+
+  }
+  .svelte-1f354aw {
+    background: transparent !important; 
+  }
+  .app.svelte-1kyws56.svelte-1kyws56{
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .svelte-vt1mxs button {
+    margin: 0;
+    background:white !important;
+    color:black !important;
+    border:transparent !important;
+  }
+  .form .svelte-sfqy0y {
+    max-width: 375px !important;
+  }
+  .svelte-vt1mxs {
+    min-width: 375px !important;
+    margin: auto;
+  }
+  div.svelte-sfqy0y {
+    background: transparent;
+    border: transparent;
+    max-width: 375px !important;
+  }
