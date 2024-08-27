@@ -1,6 +1,7 @@
 import threading
 import os
 import re
+from modules.swap_faces import swap_faces
 from modules.patch import PatchSettings, patch_settings, patch_all
 
 patch_all()
@@ -890,6 +891,9 @@ def worker():
                     refiner_swap_method=refiner_swap_method,
                     disable_preview=disable_preview
                 )
+
+                if 'inpaint' in goals:
+                    imgs[0] = swap_faces(cn_img, imgs[0])
 
                 del task['c'], task['uc'], positive_cond, negative_cond  # Save memory
 
