@@ -6,7 +6,7 @@ import time
 import shared
 import modules.config
 import fooocus_version
-import modules.html
+import modules.html_change
 import modules.async_worker as worker
 import modules.constants as constants
 import modules.flags as flags
@@ -45,7 +45,7 @@ def generate_clicked(task: worker.AsyncTask):
     execution_start_time = time.perf_counter()
     finished = False
 
-    yield gr.update(visible=True, value=modules.html.make_progress_html(1, 'Waiting for task to start ...')), \
+    yield gr.update(visible=True, value=modules.html_change.make_progress_html(1, 'Waiting for task to start ...')), \
         gr.update(visible=True, value=None), \
         gr.update(visible=False, value=None), \
         gr.update(visible=False)
@@ -65,7 +65,7 @@ def generate_clicked(task: worker.AsyncTask):
                         continue
 
                 percentage, title, image = product
-                yield gr.update(visible=True, value=modules.html.make_progress_html(percentage, title)), \
+                yield gr.update(visible=True, value=modules.html_change.make_progress_html(percentage, title)), \
                     gr.update(visible=True, value=image) if image is not None else gr.update(), \
                     gr.update(), \
                     gr.update(visible=False)
@@ -126,7 +126,7 @@ with shared.gradio_root as demo:
                                             elem_classes=['main_view'])
                 progress_gallery = gr.Gallery(label='Finished Images', show_label=True, object_fit='contain',
                                               height=768, visible=False, elem_classes=['main_view', 'image_gallery'])
-            progress_html = gr.HTML(value=modules.html.make_progress_html(32, 'Progress 32%'), visible=False,
+            progress_html = gr.HTML(value=modules.html_change.make_progress_html(32, 'Progress 32%'), visible=False,
                                     elem_id='progress-bar', elem_classes='progress-bar')
             gallery = gr.Gallery(label='Gallery', show_label=False, object_fit='contain', visible=True, height=768,
                                  elem_classes=['resizable_area', 'main_view', 'final_gallery', 'image_gallery'],
